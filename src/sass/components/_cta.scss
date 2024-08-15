@@ -1,0 +1,134 @@
+.optech-footer-cta {
+  &-wrap{
+    padding: 105px;
+    position: relative;
+    border-radius: 30px;
+    background-size: 100% 100%;
+    background-position: center;
+    &::before{
+      content: "";
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+    }
+    &::after{
+      content: "";
+      right: 0;
+      bottom: 0;
+      width: 0;
+      height: 0;
+      position: absolute;
+    }
+    @include max(1399px) {
+      padding: 80px;
+    }
+    @include max(991px) {
+      border-radius: 70px 25px 70px 25px;
+      background-color: var(--accent-bg);
+      &::before{
+        border-top: 60px solid var(--dark-bg);
+        border-right: 60px solid transparent;
+      }
+      &::after{
+        border-bottom: 60px solid var(--dark-bg);
+        border-left: 60px solid transparent;
+      }
+      
+    }
+    @include max(767px) {
+      padding: 50px 15px;
+    }
+    &.shape-white{
+      @include max(991px) {
+        background-color: var(--accent-bg);
+        &::before{
+          border-top: 60px solid var(--white-bg);
+        }
+        &::after{
+          border-bottom: 60px solid var(--white-bg);
+        }
+        
+      }
+    }
+  }
+  &-content{
+    @include max(991px) {
+      text-align: center;
+    }
+    h2{
+      font-size: 64px;
+      margin-bottom: 20px;
+      color: var(--white-color);
+      @include max(1399px) {
+        font-size: 60px;
+      }
+      @include max(1199px) {
+        font-size: 48px;
+      }
+      @include max(767px) {
+        font-size: 36px;
+      }
+    }
+    p{
+      color: var(--light-color2);
+    }
+  }
+  &-btn{
+    @include max(991px) {
+      text-align: center;
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+  
+}
+
+.optech-cta {
+  &-wrap{
+    background-size: cover;
+    background-position: center;
+  }
+  &-content{
+    &.center{
+      max-width: 600px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    @include max(991px) {
+      text-align: center;
+    }
+    
+    h2{
+      font-size: 64px;
+      margin-bottom: 20px;
+      color: var(--white-color);
+      @include max(1399px) {
+        font-size: 60px;
+      }
+      @include max(1199px) {
+        font-size: 48px;
+      }
+      @include max(767px) {
+        font-size: 36px;
+      }
+    }
+    p{
+      color: var(--light-color2);
+    }
+    &.dark-color{
+      h2, p{
+        color: var(--heading-color);
+      }
+    }
+  }
+  &-btn{
+    @include max(991px) {
+      text-align: center;
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+  
+}

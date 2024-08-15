@@ -1,0 +1,234 @@
+
+.optech-footer{
+  &-textarea{
+    @include max(1199px) {
+      max-width: 400px;
+      margin-bottom: 40px;
+    }
+    img{
+      margin-bottom: 30px;
+    }
+    p{
+      line-height: 30px;
+      margin-bottom: 28px;
+      color: var(--light-color2);
+    }
+    &.dark-color{
+      p{
+        color: var(--body-color);
+      }
+    }
+  }
+  &-title{
+    h5{
+      margin-bottom: 20px;
+     color: var(--white-color);
+     @include max(767px) {
+      margin-bottom: 15px;
+     }
+    }
+    p{
+      color: var(--light-color2);
+    }
+    &.dark-color{
+      h5{
+        color: var(--heading-color);
+      }
+      p{
+        color: var(--body-color);
+      }
+    }
+  }
+  &-menu{
+    @include max(767px) {
+      margin-bottom: 35px;
+    }
+    ul{
+      li{
+        margin-bottom: 12px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        a{
+          position: relative;
+          transition: all 0;
+          color: var(--light-color2);
+          &:hover{
+            color: var(--white-color);
+          }
+          &:before{
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: auto;
+            right: 0;
+            height: 1px;
+            width: 0;
+            background-color: var(--light-color2);
+            transition: all .3s ease;
+          }
+          &:hover:before{
+            left: 0;
+            right: auto;
+            width: 100%;
+            background-color: var(--white-color);
+          }
+        }
+      }
+    }
+    &.dark-color{
+      ul{
+        li{
+    
+          a{
+            color: var(--body-color);
+            &:hover{
+              color: var(--heading-color);
+            }
+            &:before{
+              background: var(--heading-color);
+            }
+         
+          }
+        }
+      }
+    }
+  }
+}
+
+.optech-footer-bottom{
+  padding: 30px 0;
+  border-top: 1px solid rgba(206, 208, 223, 0.2);
+  @include max(991px) {
+    padding: 25px 0;
+    text-align: center;
+  }
+  &.center{
+    text-align: center;
+  }
+  &.one{
+    border-top: 1px solid var(--light-color1);
+  }
+  
+}
+
+
+.optech-copywright{
+  width: 100%;
+   p{
+    line-height: 30px;
+    color: var(--light-color2);
+   }
+   &.dark-color{
+    p{
+      color: var(--body-color);
+    }
+  }
+}
+
+.ml30{
+  margin-left: 30px;
+  @include max(767px) {
+    margin-left: 0;
+  }
+}
+
+// start v5
+.footer-v5{
+  z-index: 0;
+  position: relative;
+  &::before{
+    content: "";
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 84%;
+    position: absolute;
+    background-color: var(--dark-bg);
+    @include max(767px) {
+      height: 92%;
+    }
+  }
+  &::after{
+    content: "";
+    left: 0;
+    bottom: 0;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--light-bg1);
+
+  }
+}
+
+.optech-footer{
+  &-form{
+    padding: 80px;
+    position: relative;
+    @include max(991px) {
+      padding: 60px;
+    }
+    @include max(767px) {
+      padding: 40px;
+    }
+    h5{
+      margin-bottom: 6px;
+    }
+    &-wrap{
+      position: relative;
+      background-color: var(--white-bg);
+      border-radius: 90px 30px 90px 30px;
+      &::before{
+        content: "";
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-top: 70px solid var(--light-bg1);
+        border-right: 70px solid transparent;
+      }
+      &::after{
+        content: "";
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-bottom: 70px solid var(--dark-bg);
+        border-left: 70px solid transparent;
+      }
+      @include max(991px) {
+        border-radius: 70px 25px 70px 25px;
+        &::before{
+          border-top: 60px solid var(--light-bg1);
+          border-right: 60px solid transparent;
+        }
+        &::after{
+          border-bottom: 60px solid var(--dark-bg);
+          border-left: 60px solid transparent;
+        }
+        
+      }
+    }
+  }
+  
+}
+
+#map{
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 30px 90px 0px;
+  @include max(991px) {
+    height: 500px;
+    border-radius: 0px 0px 70px 0px;
+  }
+  @include max(767px) {
+    height: 400px;
+  }
+}
+
+
+// End v5

@@ -1,0 +1,230 @@
+.optech-blog{
+  &-wrap{
+    border-radius: 18px;
+    margin-bottom: 24px;
+    transition: all 0.4s;
+    overflow: hidden;
+    border: 1px solid var(--light-color1);
+    &:hover .optech-blog-thumb img{
+      transform: scale(1.1);
+    }
+    &:hover {
+      border: 1px solid var(--white-color);
+      box-shadow: 0px 12px 40px 4px #0A165E14;
+    }
+   
+  }
+  &-thumb{
+    overflow: hidden;
+    img{
+      transition: all 0.4s;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-content{
+    padding: 40px;
+    @include max(991px) {
+      padding: 30px;
+    }
+    &.padding-medium{
+      padding: 35px;
+      @include max(991px) {
+        padding: 30px;
+      }
+    }
+    h2{
+      margin-bottom: 15px;
+    }
+    @include max(991px) {
+      padding: 30px;
+    }
+    h3, h4{
+      transition: all 0.4s;
+      margin-bottom: 20px;
+    }
+  
+    &.reduced-padding{
+      padding: 28px;
+    }
+  }
+  &-meta{
+    margin-bottom: 15px;
+    ul{
+      line-height: 1;
+      li{
+        position: relative;
+        padding-right: 20px;
+        display: inline-block;
+        &::before{
+          content: "";
+          right: 5px;
+          top: 5px;
+          width: 5px;
+          height: 5px;
+          border-radius: 20px;
+          position: absolute;
+          background-color: var(--body-color);
+        }
+        &:last-child::before{
+          content: none;
+        }
+        a{
+          transition: all 0.4s;
+          color: var(--body-color);
+          &:hover{
+            color: var(--accent-color);
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+.optech-icon{
+  &-btn{
+    line-height: 22px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s;
+    color: var(--accent-color);
+    i{
+      font-weight: normal;
+      font-size: 22px;
+      margin-left: 8px;
+      transition: all 0.4s;
+    }
+    &:hover{
+      color: var(--accent-color);
+    }
+    .icon-show{
+      opacity: 0;
+      transition: all 0.4s;
+    }
+    &:hover .icon-show{
+      opacity: 1;
+      margin-right: 32px;
+    }
+    .icon-hide{
+      transition: all 0.4s;
+      transform: translateX(-28px);
+    }
+    &:hover .icon-hide{
+      opacity: 0;
+    }
+    span{
+      position: relative;
+      transform: translateX(-28px);
+    }
+  }
+}
+
+.optech-blog-grid{
+  .optech-blog-content{
+    padding: 28px;
+  }
+}
+
+
+// blog main card
+
+.optech-blog{
+  &-wrap2{
+    border-radius: 18px;
+    margin-bottom: 24px;
+    transition: all 0.4s;
+    overflow: hidden;
+    &:hover .optech-blog-thumb2 img{
+      transform: scale(1.1);
+    }
+  
+    .optech-blog-meta ul li {
+      a{
+        color: var(--light-color2);
+      }
+      &::before{
+        right: 5px;
+        background-color: var(--light-color2);
+      }
+      
+    }
+    .optech-icon-btn{
+      opacity: 0;
+      margin-top: -28px;
+      color: var(--white-color);
+    }
+    &:hover .optech-icon-btn{
+      opacity: 1;
+      margin-top: 15px;
+    }
+  }
+  &-thumb2{
+    position: relative;
+    overflow: hidden;
+    img{
+      transition: all 0.4s;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &::before{
+      content: "";
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s;
+      position: absolute;
+      background: linear-gradient(180deg, rgba(4, 13, 67, 0) 52.38%, #040D43 91.91%);
+    }
+    &:hover::before{
+      opacity: 0;
+    }
+    &::after{
+      content: "";
+      left: 0;
+      top: 0;
+      opacity: 0;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transition: all 0.4s;
+      background: linear-gradient(180deg, rgba(43, 77, 255, 0) 0%, #2B4DFF 100%);
+    }
+    &:hover::after{
+      opacity: 1;
+    }
+  }
+  &-content2{
+    z-index: 3;
+    padding: 28px;
+    position: absolute;
+    bottom: 0;
+    h4{
+      color: var(--white-color);
+    }
+  
+  }
+ 
+  
+}
+// start v3
+.blog-column{
+  background-color: var(--white-bg);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  @include max(767px) {
+    display: block;
+  }
+  .optech-blog-content{
+    padding: 28px;
+  }
+  .optech-blog-thumb{
+    height: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "About Us" %}
+ {% block content %}
+
+{% include "../templates/layout/header-footer/main-header.html" %} 
+
+<div class="optech-errors-section">
+  <div class="container">
+    <div class="optech-errors-content">
+      <img src="assets/images/breadcrumb/errors404.svg" alt="">
+      <h2>Oops, this page is not found</h2>
+      <p>The page you’re looking for can’t be found. Double-check the URL and try again. we invite you to visit our homepage.</p>
+      <div class="optech-extra-mt" data-aos="fade-up" data-aos-duration="800">
+        <a class="optech-default-btn optech-light-btn" href="index.html" data-text="Ask Any Question"> <span class="btn-wraper">Back to Homepage</span> </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End breadcrumb -->
+
+
+
+{% include "../templates/layout/header-footer/main-footer.html" %} 
+  
+{% endblock %}

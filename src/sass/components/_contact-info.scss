@@ -1,0 +1,187 @@
+// header info
+.optech-header{
+  &-info{
+    &-wrap{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    ul{
+      li{
+        display: inline-block;
+        position: relative;
+        padding-left: 24px;
+        margin-right: 48px;
+        font-size: 14px;
+        color: var(--white-color);
+        &:last-child{
+          margin-right: 0;
+        }
+        a{
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          color: var(--white-color);
+        }
+        i{
+          left: 0;
+          font-size: 18px;
+          position: absolute;
+          color: var(--white-color);
+        }
+      }
+    }
+    &.dark-color{
+      ul{
+        li{
+          color: var(--heading-color);
+          a{
+            color: var(--heading-color);
+          }
+          i{
+            color: var(--heading-color);
+          }
+        }
+      }
+    }
+  }
+}
+// End header info
+
+.optech-infobox{
+  &-item{
+    padding: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    background-color: var(--dark-bg2);
+    @include max(991px) {
+      padding: 20px;
+      gap: 15px;
+    }
+    &.light-color{
+      background-color: var(--light-bg1);
+      .optech-infobox-data {
+        p{
+          color: var(--body-color);
+        }
+        h5{
+          color: var(--heading-color);
+        }
+      }
+    }
+  }
+  &-icon{
+    width: 56px;
+    height: 56px;
+    display: flex;
+    flex-shrink: 0;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-bg);
+    i{
+      font-size: 28px;
+      color: var(--white-color);
+    }
+  
+  }
+  &-data{
+    p{
+      margin-bottom: 5px;
+      line-height: 24px;
+      color: var(--light-color2);
+    }
+    h5{
+      color: var(--white-color);
+    }
+   
+  }
+  
+}
+.extra-padding{
+  padding-bottom: 76px;
+  @include max(991px) {
+    padding-bottom: 56px;
+  }
+  @include max(767px) {
+    padding-bottom: 40px;
+  }
+}
+
+.optech-subscription-column{
+  @include max(991px) {
+    margin-top: 40px;
+  }
+ 
+}
+// End footer two
+
+// footer info
+.optech-footer{
+  &-info{
+    ul{
+      li{
+        position: relative;
+        padding-left: 24px;
+        margin-bottom: 4px;
+        color: var(--white-color);
+        &:last-child{
+          margin-bottom: 0;
+        }
+        a{
+          display: flex;
+          align-items: center;
+          color: var(--white-color);
+        }
+        i{
+          left: 0;
+          font-size: 18px;
+          position: absolute;
+          color: var(--white-color);
+        }
+      }
+    }
+    &.dark-color{
+      ul{
+        li{
+          color: var(--heading-color);
+          a{
+            color: var(--heading-color);
+          }
+          i{
+            color: var(--heading-color);
+          }
+        }
+      }
+    }
+  }
+}
+// End footer info
+
+// start contact info main
+.optech-contact-info{
+  margin-bottom: 40px;
+  i{
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--white-color);
+    background-color: var(--heading-color);
+  }
+  h5{
+    margin-bottom: 6px!important;
+  }
+
+  a{
+    display: block;
+    color: var(--body-color);
+  }
+}

@@ -1,0 +1,45 @@
+.optech-navigation {
+  padding-top: 56px;
+  text-align: center;
+  @include max(991px) {
+    padding-top: 36px;
+  }
+  .pagination{
+    &.center{
+      justify-content: center;
+    }
+  }
+}
+
+.optech-navigation span.current, 
+.page-links .current {
+  cursor: not-allowed;
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+.optech-navigation a, 
+.optech-navigation span, 
+.page-links a, 
+.page-links span {
+  height: 60px;
+  width: 60px;
+  font-weight: 600;
+  display: inline-flex;
+  text-align: center;
+  line-height: 60px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+  color: var(--body-color);
+  border-radius: 6px;
+  background-color: var(--light-bg2);
+  i{
+    font-size: 20px;
+  }
+}
+
+.optech-navigation a:hover, 
+.page-links a:hover {
+  background-color: var(--accent-bg);
+  color: var(--white-color);
+}

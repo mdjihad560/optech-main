@@ -1,0 +1,125 @@
+
+
+.optech-pricing{
+  &-wrap{
+    margin-bottom: 24px;
+    padding: 28px;
+    border-radius: 18px;
+    border: 1px solid var(--light-color1);
+    &.active{
+      background-color: var(--accent-bg);
+      .optech-pricing-btn{
+        background-color: var(--white-bg);
+        &:hover{
+          background-color: var(--dark-bg);
+        }
+      }
+      p {
+        color: var(--light-color2);
+      }
+      .optech-pricing-header{
+        h4{
+          color: var(--white-color);
+        }
+       
+      }
+      .optech-pricing-price{
+        h2{
+          color: var(--white-color);
+        }
+        span {
+          color: var(--light-color2);
+        }
+      }
+      .optech-pricing-feature{
+        ul{
+          li{
+            color: var(--white-color);
+            i{
+              color: var(--white-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  &-header{
+    margin-bottom: 30px;
+    h4{
+      margin-bottom: 10px;
+    }
+  }
+  &-price{
+    margin-bottom: 30px;
+    h2{
+      font-size: 64px;
+      line-height: 1;
+      @include max(991px) {
+        font-size: 48px;
+      }
+      span{
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0;
+        margin-left: 10px;
+        text-transform: capitalize;
+        color: var(--body-color);
+      }
+    }
+  }
+  &-btn{
+    width: 100%;
+    display: block;
+    font-weight: 600;
+    padding: 18px;
+    transition: all 0.4s;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 6px;
+    letter-spacing: -0.01em;
+    justify-content: center;
+    color: var(--heading-color);
+    background-color: var(--light-bg2);
+    &:hover{
+      color: var(--white-color);
+      background-color: var(--dark-bg);
+    }
+  }
+  &-feature{
+    margin-bottom: 40px;
+    ul{
+      li{
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 10px;
+        color: var(--heading-color);
+        &:last-child{
+          margin-bottom: 0;
+        }
+        i{
+          left: 0;
+          top: 0;
+          font-size: 24px;
+          position: absolute;
+          color: var(--heading-color);
+        }
+      }
+    }
+  }
+
+}
+
+.optech-pricing2{
+  border: none;
+  background-color: var(--white-bg);
+  .optech-pricing-price {
+    margin-bottom: 15px;
+}
+.optech-pricing-feature{
+  margin: 0;
+}
+.optech-pricing-btn{
+  margin-bottom: 28px;
+}
+
+}

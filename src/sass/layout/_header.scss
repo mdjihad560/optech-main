@@ -1,0 +1,359 @@
+
+header.optech-header-section {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  transition: all 0.4s;
+}
+header.optech-header-section.sticky-menu{
+  box-shadow: 0 4px 80px rgba(0,0,0,.1);
+}
+.sticky-menu .optech-header-top{
+  margin-top: -57px;
+  opacity: 0;
+}
+.optech-header{
+  &-top{
+    padding: 12px 0;
+    transition: all 0.4s;
+    @include max(991px) {
+      display: none;
+    }
+  }
+}
+.optech-header-bottom{
+  @include max(991px) {
+    padding: 20px 0;
+  }
+}
+// end main
+.optech-header-bottom{
+  transition: all 0.4s;
+  .optech-header-bottom2{
+    padding: 0 18px;
+    border-radius: 10px;
+    background-color: var(--white-bg);
+    @include max(991px) {
+      padding: 12px;
+    }
+  }
+ 
+}
+.optech-header-one.sticky-menu .optech-header-bottom{
+  background-color: var(--white-bg);
+  @include max(991px) {
+    padding: 0;
+  }
+}
+
+// End v1
+.optech-header-top{
+  .extra-border-bottom{
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
+.optech-header-two.sticky-menu{
+  .optech-header-bottom{
+    background-color: var(--dark-bg);
+  }
+}
+
+.light-color{
+  &.site-menu-main .nav-link-item{
+    color: var(--white-color);
+  }
+}
+
+.site-header .mobile-menu-trigger.light-color {
+  span{
+    background-color: var(--white-color);
+    &::before, 
+    &::after{
+      background-color: var(--white-color);
+    }
+  }
+  
+}
+
+// End v2
+  .header-bottom-border{
+    border-bottom: 1px solid #272F5D;
+    &.border-color-light{
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    @include max(991px) {
+      padding: 20px 0;
+    }
+  }
+.sticky-menu{
+  .optech-header-bottom {
+    background-color: var(--dark-bg);
+    .header-bottom-border{
+      border-bottom: 1px solid var(--dark-bg);
+    }
+  }
+}
+
+.optech-header-icon {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.optech-header-barger{
+  cursor: pointer;
+  position: relative;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+  background-color: #1E2656;
+  &.light-color{
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  @include max(767px) {
+    display: none;
+  }
+  span {
+    height: 2px;
+    width: 30px;
+    margin: 4px 0;
+    display: block;
+    position: relative;
+    background-color: var(--white-bg);
+    &:before {
+      content: "";
+      top: -8px;
+      width: 15px;
+      height: 2px;
+      transition: all 0.4s;
+      position: absolute;
+      transform: translateX(10px);
+      background-color: var(--white-bg);
+    }
+    
+    &::after {
+      content: "";
+      bottom: -8px;
+      width: 15px;
+      height: 2px;
+      position: absolute;
+      transition: all 0.4s;
+      transform: translateX(6px);
+      background-color: var(--white-bg);
+    }
+    
+  }
+
+
+  &:hover span:before{
+    transform: translateX(5px);
+  }
+  &:hover span::after{
+    transform: translateX(10px);
+  }
+  
+}
+// end v3
+
+.sticky-menu.header-four{
+  .optech-header-bottom {
+    background-color: var(--white-bg);
+  }
+}
+
+// start search
+
+.optech-header-search {
+  cursor: pointer;
+  position: relative;
+  color: var(--heading-color);
+  &.light-color{
+    i{
+      color: var(--white-color);
+      transition: all 0.4s;
+    }
+    
+  }
+  i{
+    font-size: 24px;
+  }
+  &:hover i{
+    color: var(--accent-color);
+  }
+  
+  @include max(767px) {
+    display: none;
+  }
+  &-section{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    top: 0;
+    z-index: 9999;
+    padding: 130px 0 80px;
+    transition: 0.5s all ease;
+    transform: translateY(-100%);
+    @include max(991px) {
+      padding: 100px 0 80px;
+    }
+    @include max(767px) {
+      padding: 80px 0;
+    }
+    &.open{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+  &-close{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    i{
+      font-size: 30px;
+      color: #6E6E77;
+      transition: all 0.4s;
+    }
+    &:hover i{
+      color: var(--accent-color);
+    }
+  }
+  
+}
+
+.search-overlay.open {
+  opacity: .8;
+  z-index: 3;
+  visibility: visible;
+}
+.search-overlay {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+  background-color: rgba(4, 13, 67, 0.5);
+}
+// End search
+
+
+// start sidebar menu
+
+.optech-sidemenu-wraper{
+  position: relative;
+}
+
+.optech-sidemenu-column {
+    width: 440px;
+    display: block;
+    height: 100%;
+    position: fixed;
+    z-index: 111;
+    padding: 50px;
+    margin-right: -440px;
+    transition: 0.5s;
+    right: 0;
+    top: 0;
+    padding-top: 70px;
+    overflow-y: scroll;
+    background-color: var(--white-bg);
+
+  .optech-social-icon.optech-social-icon3{
+    margin-bottom: 30px;
+  }
+
+}
+.optech-sidemenu-thumb{
+  margin: 30px 0;
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:5px;
+  }
+}
+
+.optech-sidemenu-column.active {
+      margin-right: 0px;
+      z-index: 9999;
+}
+
+.optech-sidemenu-close {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  cursor: pointer;
+  i{
+    font-size: 30px;
+    color: #6E6E77;
+    transition: all 0.4s;
+  }
+  &:hover i{
+    color: var(--accent-color);
+  }
+}
+.active .optech-sidemenu-close{
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.offcanvas-overlay {
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      position: fixed;
+      z-index: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: .5s;
+ }
+
+.offcanvas-overlay.active {
+      opacity: .7;
+      z-index: 111;
+      visibility: visible;
+ }
+
+.optech-sidemenu-logo{
+  margin-bottom: 30px;
+}
+
+
+
+.optech-sidemenu-column::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background-color: #F5F5F5;
+}
+
+.optech-sidemenu-column::-webkit-scrollbar{
+  width: 5px;
+  background-color: #F5F5F5;
+}
+
+.optech-sidemenu-column::-webkit-scrollbar-thumb{
+  background-color: #000000;
+  border: 2px solid #555555;
+}
+
+
+@media (max-width: 767px) {
+.optech-sidemenu-wraper{
+  display: none;
+}
+
+}
+// End sidebar

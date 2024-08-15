@@ -1,0 +1,50 @@
+.optech-shape1 {
+  position: absolute;
+  top: 70px;
+  right: -82px;
+  z-index: -1;
+  @include max(991px) {
+    display: none;
+  }
+}
+
+.optech-shape2 {
+  position: absolute;
+  bottom: -92px;
+  left: 200px;
+  z-index: -1;
+  @include max(991px) {
+    display: none;
+  }
+}
+
+
+.optech-shape3 {
+  position: absolute;
+  top: 40px;
+  left: -85px;
+  z-index: -1;
+  @include max(991px) {
+    display: none;
+  }
+}
+
+.optech-shape4 {
+  position: absolute;
+  bottom: -92px;
+  left: 50%;
+  z-index: -1;
+  @include max(991px) {
+    display: none;
+  }
+}
+
+.optech-shape5 {
+  position: absolute;
+  top: 70px;
+  left: -83px;
+  z-index: -1;
+  @include max(991px) {
+    display: none;
+  }
+}

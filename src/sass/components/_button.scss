@@ -1,0 +1,106 @@
+// bootstrap button style
+
+.optech-default-btn, 
+#optech-default-btn,
+button#optech-subscription-btn,
+button#optech-main-form-btn,
+#optech-hero-form-btn,
+#optech-team-form-btn,
+.optech-shop-btn,
+.optech-product-btn {
+  font-size: $button_font_size;
+  line-height: $buton_line_height;
+  padding: $button_padding;
+  border-radius: $buton_border_radius;
+  font-weight: $button_font_weight;
+  font-family: $button_font_family;
+  width: fit-content;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  color: var(--white-color)!important;
+  background-color: var(--accent-bg);
+  z-index: 0;
+  overflow: hidden;
+  position:relative;
+  letter-spacing: -0.01em;
+  transform-style: preserve-3d;
+  .btn-wraper{
+    transition: opacity .2s, transform .2s;
+    transition-timing-function: cubic-bezier(.455,.03,.515,.955);
+  }
+  &:hover .btn-wraper{
+    transform: translateY(-150%);
+    opacity: 0;
+  }
+  &::before{
+    position: absolute;
+    content: "";
+    border-radius: inherit;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: 102% 102%;
+    opacity: 0;
+  }
+  &:hover::before{
+    opacity: 1;
+  }
+  &::after{
+    content: attr(data-text);
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    opacity: 0;
+    transform: translate(0, 100%);
+    transition: opacity .2s, transform .2s;
+    transition-timing-function: cubic-bezier(.455,.03,.515,.955);
+    white-space: nowrap;
+  }
+  &:hover::after{
+    transform: translate(0%, -50%);
+    opacity: 1;
+  }
+  // &:hover:before{
+  //   top: -40%;
+  // }
+  &.optech-white-btn{
+    color: var(--heading-color)!important;
+    background-color: var(--white-color);
+  }
+  
+  &.optech-light-btn{
+    color: var(--heading-color)!important;
+    background-color: var(--light-bg2);
+  }
+  &.optech-header-btn{
+    padding: 18px 24.8px;
+  }
+
+  &.disabled,
+  &:disabled {
+    opacity: 1;
+  }
+  &.d-block {
+    width: 100%;
+  }
+  &.pill {
+    border-radius: 50px;
+  }
+  &.btn-icon {
+    padding: 9px 24px;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+

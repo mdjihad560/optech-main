@@ -1,0 +1,57 @@
+// fonts variable
+$body-font: "Sora", sans-serif!default;
+$heading-font: "Sora", sans-serif !default;
+
+// color variable
+:root {
+  --heading-color: #0A165E;
+  --body-color: #585B6F;
+  --accent-color: #2B4DFF;
+  --white-color: #ffffff;
+  --light-color1: #E3E3EC;
+  --light-color2: #CED0DF;
+  --dark-bg: #040D43;
+  --dark-bg2: #1E2656;
+  --dark-bg3: #0A165E;
+  --white-bg: #ffffff;
+  --accent-bg: #2B4DFF;
+  --light-bg1: #F5F6F7;
+  --light-bg2: #E2E3EC;
+  --light-bg3: #EEF1FF;
+}
+
+$colors: (
+ 
+);
+
+$bodyfontScale: (
+  xl: (
+    20: 20px,
+    lineheight: 32px,
+  ),
+  lg: (
+    18: 18px,
+    lineheight: 28px,
+  ),
+  md: (
+    16: 16px,
+    lineheight: 24px,
+  ),
+  xs: (
+    14: 14px,
+    lineheight: 22px,
+  ),
+  xss: (
+    12: 12px,
+    lineheight: 20px,
+  ),
+);
+
+// button font size
+$button_font_size: 16px;
+$buton_line_height: 1;
+$buton_border_radius: 6px;
+$button_padding: 22px 27.3px;
+$button_font_weight: 600;
+$button_font_family: $body-font;
+
